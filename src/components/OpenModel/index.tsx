@@ -2,7 +2,7 @@ import { Button, useDisclosure } from "@chakra-ui/react";
 import GenericModel from "../GenericModel";
 import WelcomeGiki from "../WelcomeGiki";
 import LangCountry from "../LangCountry";
-import SubmitData from "../SubmitData";
+import Finsish from "../Finsish";
 import Gallery from "../Gallery";
 import { useState } from "react";
 import Steps from "../Steps";
@@ -39,7 +39,7 @@ const OpenModel = () => {
       case 2:
         return <Gallery handleNext={handleNext} />;
       case 3:
-        return <SubmitData handleFinsish={handleFinsish} />;
+        return <Finsish handleFinsish={handleFinsish} />;
       default:
         return null;
     }

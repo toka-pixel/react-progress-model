@@ -22,7 +22,7 @@ const WelcomeGiki: React.FC<WelcomeGikiProps> = ({ handleNext }) => {
         backgroundColor='gray.50'
       >
         <p></p>
-        <p className="text-orange font-bold text-[28px] leading-normal">Giki</p>
+        <p className="text-orange font-bold text-[28px] leading-normal">Alice</p>
         <img
           src="/imgs/edit.svg"
           className="w-[41.14px] h-[10.37px]"

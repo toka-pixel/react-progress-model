@@ -1,14 +1,10 @@
 import { Box, Button } from "@chakra-ui/react";
-import { useRecoilValue } from "recoil";
-import { rightCommunityAtom } from "../../recoil/atom/rightCommunity";
 
-type SubmitDataProps = {
+type FinsishProps = {
   handleFinsish: () => void;
 };
 
-const SubmitData: React.FC<SubmitDataProps> = ({ handleFinsish }) => {
-  const rightCommunityData = useRecoilValue(rightCommunityAtom);
-
+const Finsish: React.FC<FinsishProps> = ({ handleFinsish }) => {
   return (
     <Box boxSize="xs" className="m-auto">
       <img
@@ -24,7 +20,7 @@ const SubmitData: React.FC<SubmitDataProps> = ({ handleFinsish }) => {
       <Button
         colorScheme="orange"
         className=" h-[41.14px]  text-sm/[14px] mt-[60px] uppercase"
-        variant="solid"
+        variant="outline"
         width={{ base: "100%", sm: "244.71px" }}
         onClick={handleFinsish}
       >
@@ -34,4 +30,4 @@ const SubmitData: React.FC<SubmitDataProps> = ({ handleFinsish }) => {
   );
 };
 
-export default SubmitData;
+export default Finsish;
