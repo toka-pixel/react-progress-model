@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 type FinsishProps = {
   handleFinsish: () => void;
@@ -13,7 +13,7 @@ const Finsish: React.FC<FinsishProps> = ({ handleFinsish }) => {
         alt="happy-smile"
         className="inline-block"
       />
-      <div className="mt-[30px]  text-[30px]">Success!</div>
+      <div className="mt-[30px]  text-[30px]">Success</div>
 
       <div>You have completed the questions</div>
 
