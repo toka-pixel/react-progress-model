@@ -22,7 +22,6 @@ const Gallery: React.FC<GalleryProps> = ({ handleNext }) => {
       setActivities((prev) => prev.filter((item) => item !== title));
     }
   };
-  console.log(activities);
 
   const handleGalleryData = () => {
     if (activities.length > 2) {

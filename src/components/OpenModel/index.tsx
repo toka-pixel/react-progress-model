@@ -1,11 +1,10 @@
 import { Button, useDisclosure } from "@chakra-ui/react";
-import { rightCommunityAtom } from "../../recoil/atom/rightCommunity";
 import GenericModel from "../GenericModel";
 import WelcomeGiki from "../WelcomeGiki";
 import LangCountry from "../LangCountry";
+import SubmitData from "../SubmitData";
 import Gallery from "../Gallery";
 import { useState } from "react";
-import { useRecoilValue } from "recoil";
 import Steps from "../Steps";
 
 const OpenModel = () => {
@@ -13,20 +12,22 @@ const OpenModel = () => {
 
   const [activeStep, setActiveStep] = useState<number>(0);
 
-  const rightCommunityData = useRecoilValue(rightCommunityAtom);
-
-  console.log(rightCommunityData);
 
   const handleNext = () => {
-    if (activeStep >= 0 && activeStep < 4) {
+    if (activeStep >= 0 && activeStep < 3) {
       setActiveStep((prev) => ++prev);
     }
   };
 
   const handlePrevious = () => {
-    if (activeStep > 0 && activeStep < 4) {
+    if (activeStep > 0 && activeStep < 3) {
       setActiveStep((prev) => --prev);
     }
+  };
+
+  const handleFinsish = () => {
+    setActiveStep(0);
+    onClose();
   };
 
   const GetSectionComponent = () => {
@@ -37,24 +38,26 @@ const OpenModel = () => {
         return <LangCountry handleNext={handleNext} />;
       case 2:
         return <Gallery handleNext={handleNext} />;
+      case 3:
+        return <SubmitData handleFinsish={handleFinsish} />;
       default:
         return null;
     }
   };
 
   return (
-    <div className="text-center ">
+    <div className="text-center">
       <img
         src={"/imgs/logo.png"}
         className="App-logo w-[285.48px] h-[257.27px] m-auto"
         alt="logo"
       />
       <Button
-        colorScheme="teal "
-        className=" h-[41.14px] bg-orange text-sm/[14px] mt-[60px]"
+        colorScheme="orange"
+        className=" h-[41.14px]  text-sm/[14px] mt-[60px]"
         variant="solid"
         onClick={onOpen}
-        width={{ base: "100%" , sm: "409px" }} 
+        width={{ base: "100%", sm: "409px" }}
       >
         Open Model
       </Button>
@@ -62,17 +65,19 @@ const OpenModel = () => {
       <GenericModel isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
         <GetSectionComponent />
 
-        {activeStep > 0 && (
-          <Button
-            className=" h-[41.14px] text-sm/[14px] mt-[60px] m-auto"
-            variant="unstyled"
-            onClick={handlePrevious}
-            width={{ base: "100%" , sm: "244.71px" }} 
-          >
-            Back
-          </Button>
+        {activeStep > 0 && activeStep !== 3 && (
+          <>
+            <Button
+              className=" h-[41.14px] text-sm/[14px] mt-[60px] m-auto"
+              variant="unstyled"
+              onClick={handlePrevious}
+              width={{ base: "100%", sm: "244.71px" }}
+            >
+              Back
+            </Button>
+            <Steps activeStep={activeStep} />
+          </>
         )}
-        <Steps activeStep={activeStep} />
       </GenericModel>
     </div>
   );

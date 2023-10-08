@@ -16,12 +16,12 @@ const GenericModel: React.FC<GenericModelProps> = ({
   onClose,
 }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false} >
+    <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
       <ModalOverlay />
       <ModalContent
-        className="px-[40px] pt-[20px] pb-[20px] text-center shadow-xl "
-         maxW="612.09px"
-        width={{ base: "100%" }} 
+        className="pt-[20px] pb-[20px] text-center shadow-xl"
+        maxW="612.09px"
+        width={{ base: "100%" }}
       >
         <ModalBody>{children}</ModalBody>
       </ModalContent>

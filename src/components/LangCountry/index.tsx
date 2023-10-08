@@ -1,5 +1,5 @@
 import { Button, FormControl, Select } from "@chakra-ui/react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { rightCommunityAtom } from "../../recoil/atom/rightCommunity";
 
 type LangCountryProps = {
@@ -8,6 +8,8 @@ type LangCountryProps = {
 
 const LangCountry: React.FC<LangCountryProps> = ({ handleNext }) => {
   const [_, setRightCommunityData] = useRecoilState(rightCommunityAtom);
+
+  const rightCommunityData = useRecoilValue(rightCommunityAtom);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,6 +36,7 @@ const LangCountry: React.FC<LangCountryProps> = ({ handleNext }) => {
             placeholder="Language"
             bg="gray.50"
             border="none"
+            defaultValue={rightCommunityData?.language}
           >
             <option>English (US)</option>
             <option>Arabic</option>
@@ -45,6 +48,7 @@ const LangCountry: React.FC<LangCountryProps> = ({ handleNext }) => {
             placeholder="Country"
             bg="gray.50"
             border="none"
+            defaultValue={rightCommunityData?.country}
           >
             <option>United Arab Emirates</option>
             <option>Italy (Italia)</option>
@@ -52,11 +56,11 @@ const LangCountry: React.FC<LangCountryProps> = ({ handleNext }) => {
         </FormControl>
 
         <Button
-          colorScheme="teal "
-          className=" h-[41.14px] bg-orange text-sm/[14px] mt-[130px] m-auto shadow-xl "
+          colorScheme="orange"
+          className=" h-[41.14px]  text-sm/[14px] mt-[130px] m-auto shadow-xl "
           variant="solid"
           type="submit"
-          width={{ base: "100%" , sm: "244.71px" }} 
+          width={{ base: "100%", sm: "244.71px" }}
         >
           Next
         </Button>
