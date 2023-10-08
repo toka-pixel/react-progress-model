@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "title":"innovation",
+         "src":"innovation.png"
+    },
+    {
+        "id":2,
+         "title":"medicine",
+         "src":"medicine.png"
+    },
+    {
+        "id":3,
+        "title":"education",
+         "src":"education.jpg"
+    },
+    {
+        "id":4,
+        "title":"pharmtech",
+         "src":"pharmtech.png"
+    },
+    {
+        "id":5,
+        "title":"research",
+         "src":"research.png"
+    },
+    {
+        "id":6,
+        "title":"technology",
+         "src":"technology.png"
+    },  {
+        "id":7,
+        "title":"telemedicene",
+         "src":"telemedicene.png"
+    },
+    {
+        "id":8,
+        "title":"travel",
+         "src":"travel.png"
+    }
+
+]
