@@ -6,12 +6,12 @@ type FinsishProps = {
 
 const Finsish: React.FC<FinsishProps> = ({ handleFinsish }) => {
   return (
-    <Box boxSize="xs" className="m-auto">
+    <div className="text-center m-auto">
       <img
         width="100px"
         src="/imgs/happy-smile.svg"
         alt="happy-smile"
-        className="inline-block "
+        className="inline-block"
       />
       <div className="mt-[30px]  text-[30px]">Success!</div>
 
@@ -19,14 +19,14 @@ const Finsish: React.FC<FinsishProps> = ({ handleFinsish }) => {
 
       <Button
         colorScheme="orange"
-        className=" h-[41.14px]  text-sm/[14px] mt-[60px] uppercase"
+        className=" h-[41.14px] text-sm/[14px] mt-[60px] uppercase"
         variant="outline"
-        width={{ base: "100%", sm: "244.71px" }}
         onClick={handleFinsish}
+        width={{ base: "100%", sm: "244.71px" }}
       >
         Go To Home
       </Button>
-    </Box>
+    </div>
   );
 };
 

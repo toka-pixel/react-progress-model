@@ -82,16 +82,6 @@ const Gallery: React.FC<GalleryProps> = ({ handleNext }) => {
       >
         {activities.length < 3 ? "Pick 3 more" : "Submit"}
       </Button>
-
-      {/* <div className="flex h-screen justify-center items-center flex-col">
-          <div className="w-full h-screen">
-            <img
-              src="https://placekitten.com/1400"
-              alt="Kitten"
-              className="rounded-lg w-[130.7px] h-[125.04px] ] filter brightness-50 border-solid border-[color:orange] p-[10px]"
-            />
-          </div>
-        </div> */}
     </div>
   );
 };
