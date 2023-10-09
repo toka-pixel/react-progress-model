@@ -62,7 +62,7 @@ const LangCountry: React.FC<LangCountryProps> = ({ handleNext }) => {
           type="submit"
           width={{ base: "100%", sm: "244.71px" }}
         >
-          Next
+            NEXT
         </Button>
       </form>
     </div>

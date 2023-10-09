@@ -29,7 +29,7 @@ const WelcomeGiki: React.FC<WelcomeGikiProps> = ({ handleNext }) => {
           alt="edit"
         />
       </Box>
-      <p className="text-black text-[13px] pt-[25px] drop-shadow-2xl shadow-blue-600/50 font-[700] tex-black">
+      <p className="text-black text-[13px] pt-[25px] drop-shadow-lg shadow-blue-600/50 font-[700] tex-black">
         Your answers to the next few questions will help <br />
         us find the right communities for you
       </p>
@@ -41,7 +41,7 @@ const WelcomeGiki: React.FC<WelcomeGikiProps> = ({ handleNext }) => {
         onClick={handleNext}
         width={{ base: "100%", sm: "244.71px" }}
       >
-        Next
+        NEXT
       </Button>
     </div>
   );

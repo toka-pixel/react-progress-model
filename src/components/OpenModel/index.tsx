@@ -12,7 +12,6 @@ const OpenModel = () => {
 
   const [activeStep, setActiveStep] = useState<number>(0);
 
-
   const handleNext = () => {
     if (activeStep >= 0 && activeStep < 3) {
       setActiveStep((prev) => ++prev);
@@ -59,7 +58,7 @@ const OpenModel = () => {
         onClick={onOpen}
         width={{ base: "100%", sm: "409px" }}
       >
-        Open Model
+        OPEN MODEL
       </Button>
 
       <GenericModel isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
@@ -68,10 +67,11 @@ const OpenModel = () => {
         {activeStep > 0 && activeStep !== 3 && (
           <>
             <Button
-              className=" h-[41.14px] text-sm/[14px] mt-[60px] m-auto"
               variant="unstyled"
               onClick={handlePrevious}
               width={{ base: "100%", sm: "244.71px" }}
+              marginTop={"6px"}
+              fontWeight={"600"}
             >
               Back
             </Button>
